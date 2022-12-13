@@ -1,15 +1,14 @@
-package org.hibernate.CRUD;
+package org.hibernate.OneToOne.CRUD;
 
+import org.hibernate.OneToOne.entity.Player;
+import org.hibernate.OneToOne.utils.HibernateUtils;
 import org.hibernate.Session;
-import org.hibernate.entity.Player;
-
-import static org.hibernate.utils.HibernateUtils.getSessionFactory;
 
 //Remember for update and Create you have to always create a transaction.
 public class UpdateApp {
     public static void main(String[] args){
         //initialize the session object
-        Session session = getSessionFactory().openSession();
+        Session session = HibernateUtils.getSessionFactory().openSession();
 
         Player player = session.get(Player.class, 12);
         //Instead of writting the above line please get the same object of the current stored data.

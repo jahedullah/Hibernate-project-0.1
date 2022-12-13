@@ -1,9 +1,9 @@
-package org.hibernate.utils;
+package org.hibernate.OneToOne.utils;
 
+import org.hibernate.OneToOne.entity.Answer;
+import org.hibernate.OneToOne.entity.Question;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.entity.Player;
-import org.hibernate.entity.Team;
 
 //Make the class Singleton so that it returns the same object always.
 public class HibernateUtils {
@@ -15,8 +15,8 @@ public class HibernateUtils {
         if (sessionFactory == null) {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.cfg.xml");
-            configuration.addAnnotatedClass(Player.class);
-            configuration.addAnnotatedClass(Team.class);
+            configuration.addAnnotatedClass(Answer.class);
+            configuration.addAnnotatedClass(Question.class);
 
             //create session factory
             sessionFactory = configuration.buildSessionFactory();

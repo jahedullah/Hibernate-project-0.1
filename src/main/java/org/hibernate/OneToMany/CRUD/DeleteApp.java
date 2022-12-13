@@ -1,12 +1,12 @@
-package org.hibernate.CRUD;
+package org.hibernate.OneToMany.CRUD;
 
+import org.hibernate.OneToMany.entity.Player;
+import org.hibernate.OneToMany.utils.HibernateUtils;
 import org.hibernate.Session;
-import org.hibernate.entity.Player;
-import static org.hibernate.utils.HibernateUtils.getSessionFactory;
 
 public class DeleteApp {
     public static void main(String[] args){
-        Session session = getSessionFactory().openSession();
+        Session session = HibernateUtils.getSessionFactory().openSession();
 
         Player player = session.get(Player.class, 10);
 

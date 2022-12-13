@@ -1,6 +1,6 @@
 package org.hibernate;
 
-import org.hibernate.utils.HibernateUtils;
+import org.hibernate.OneToMany.utils.HibernateUtils;
 
 public class Test {
 
